@@ -8,7 +8,27 @@
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
 
-                    <div class="flex flex-col">
+                    <div class="grid gap-2 md:flex">
+                        <div class="md:mr-auto">
+                            <form @submit.prevent="submit">
+                                <div class="grid grid-rows-2 gap-2 md:flex">
+                                    <Input id="keyword" type="text" class="mt-1 block sm:w-full md:w-10/12" v-model="form.keyword" autofocus autocomplete="username" placeholder="Keyword..." />
+                                    <Button class="" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                                        Filter
+                                    </Button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <Link class="bg-blue-700 hover:bg-blue-500 text-white font-bold py-3 text-sm px-3 rounded" >
+                            New User
+                        </Link>
+                    </div>
+
+
+                    <hr class="md:hidden my-2" />
+
+                    <div class="flex flex-col mt-4">
                         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                             <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
@@ -82,15 +102,34 @@
 import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue'
 import Pagination from '@/Components/Pagination.vue'
 import { Head } from '@inertiajs/inertia-vue3';
+import Input from '@/Components/Input.vue'
+import Button from '@/Components/Button.vue'
+import Link from '@/Components/Link.vue'
 
 export default {
     components: {
         BreezeAuthenticatedLayout,
         Head,
-        Pagination
+        Pagination,
+        Input,
+        Button,
+        Link
     },
     props: {
-        users: Object
+        users: Object,
+
+    },
+    data(){
+        return{
+            form: this.$inertia.form({
+                keyword: ''
+            })
+        }
+    },
+    methods: {
+        submit() {
+            this.form.post(this.route('users.filter'))
+        }
     }
 }
 </script>
