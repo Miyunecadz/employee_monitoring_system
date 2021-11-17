@@ -1,3 +1,5 @@
+> All of this details are not yet finalized. Maybe soon...
+
 # Employee Monitoring System
 
 ## Introduction
@@ -31,4 +33,4 @@ There will be 4 accounts to be created an these are:
 - [x] Can preview there attendance
 - [x] Can login and logout using there QR Code
 
-> All of this details are not yet finalized. Maybe soon...
+
