@@ -4,7 +4,7 @@
 We are all familiar with different kinds of attendance automation such as RFID Attendance Management, Biometric Attendance Management, and School App Attendance Management which are to reduce the time that is consumed when attendance is taken manually. Unlike the manual process, an online system easily helps management to analyze more the attendace detail as per requirement. This project "Employee Monitoring System", an attendance monitoring inteneded only for my Project.
 
 ## Description of the System
-The Employee Monitoring System is an online attendance platform. The employee will use a QR Code to login and logout through the system. The employee also can preview their monthly DTR.
+The Employee Monitoring System is an online attendance platform. The employee will use a QR Code to login and logout through the system. The employee also can preview their monthly attendance.
 
 ## How it works?
 
