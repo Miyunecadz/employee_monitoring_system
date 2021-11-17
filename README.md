@@ -30,3 +30,5 @@ There will be 4 accounts to be created an these are:
 - **Employee**
 - [x] Can preview there attendance
 - [x] Can login and logout using there QR Code
+
+> All of this details are not yet finalized. Maybe soon...
