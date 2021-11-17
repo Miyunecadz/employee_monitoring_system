@@ -9,8 +9,8 @@
 
     <form @submit.prevent="submit">
         <div>
-            <BreezeLabel for="email" value="Email" />
-            <BreezeInput id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autofocus autocomplete="username" />
+            <BreezeLabel for="username" value="Username" />
+            <BreezeInput id="username" type="text" class="mt-1 block w-full" v-model="form.username" required autofocus autocomplete="username" />
         </div>
 
         <div class="mt-4">
@@ -26,9 +26,9 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <Link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900">
+            <!-- <Link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900">
                 Forgot your password?
-            </Link>
+            </Link> -->
 
             <BreezeButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                 Log in
@@ -60,14 +60,14 @@ export default {
     },
 
     props: {
-        canResetPassword: Boolean,
+        // canResetPassword: Boolean,
         status: String,
     },
 
     data() {
         return {
             form: this.$inertia.form({
-                email: '',
+                username: '',
                 password: '',
                 remember: false
             })
