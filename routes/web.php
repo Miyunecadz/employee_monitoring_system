@@ -25,6 +25,7 @@ require __DIR__.'/auth.php';
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/users', [UserController::class, 'index'])->name('users');
+    Route::post('/users', [UserController::class, 'store'])->name('users.store');
     Route::get('/users/filter', [UserController::class, 'filter'])->name('users.filter');
     Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
 
