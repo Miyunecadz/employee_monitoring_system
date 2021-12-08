@@ -11,20 +11,15 @@ The Employee Monitoring System is an online attendance platform. The employee wi
 ## How it works?
 
 ### Users
-There will be 4 accounts to be created an these are:
+There will be 3 accounts to be created an these are:
 1. Admin
-2. HRMO
-3. In-charge Personnel 
-4. Employee
+2. In-charge Personnel 
+3. Employee
 
 ### Functionalities of each Users
 - **Admin**
 - [x] Can CRUD accounts for HRMO, In-charge Personnel and Employee
 - [x] Alter any users information
-
-- **HRMO**
-- [x] Generate and assign Unique QR Code to the fully registered employee
-- [x] Can add new employee 
 
 - **In-charge Personal**
 - [x] Scan QR Code of employee
